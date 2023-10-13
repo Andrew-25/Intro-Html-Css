@@ -1,38 +1,34 @@
+
 Body {
     background-color: rgb(129, 228, 212);
 }
-p {
+
+* {
     font-family:'Trebuchet MS';
-    padding-left: 80px;
-    padding-left: 9px;
-    text-indent: 19px;
-    margin-left: 80px;
+    box-sizing: border-box;
+
+}
+p {
+    text-align: left;
+    text-align: center;
 }
 h1 {
     font-family: Brush Script MT;
     font-size: 45px;
-    text-align: center;
+
 }
 h2{
-    font-family: 'Courier New', Courier, monospace;
-    padding-left: 40px;
-}
-h3{
-    font-family: Verdana;
-    padding-left: 60px;
+
 }
 ol{
     color: rgb(166, 179, 71);
-    padding-left: 80px;
 }
 ul{
     color: rgb(96, 99, 71);
-    padding-left: 80px;
 }
 a:link{
     color: rgb(162, 128, 135);
     font-size: 19px;
-    padding-left: 80px;
 }
 a:visited{
     color: rgb(203, 63, 91);
@@ -42,4 +38,28 @@ img {
     border-radius: 50%;
     border: 5px solid rgb(206, 206, 206);
     
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
 }
